@@ -1,0 +1,108 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/login.css' %}">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>    
+    <title>LogIN</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+</head>
+<body>
+    
+<img class="wave" src="{% static 'images/image9.jpg' %}">
+<div class="title" style="height:10vh;text-align:center;"><p style="margin-top:3vh;font-size: 5.5rem;font-family: 'Piedra', cursive;">
+    Coding Markets</p>
+    <br>
+   
+    <!-- <div class="S_btn" style="text-align:right;margin-right:15%;">
+        <h4>If You Dont't Have An Account</h4>
+    <button>SIGN IN</button>
+</div> -->
+</div>
+
+</div>
+<div class="container">
+    
+    <div class="img">
+        
+        <img src="{% static 'images/image10.svg' %}" style ="float:right;">
+        
+        
+    </div>
+<div class="login-container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <img class="avatar" src="{% static 'images/image11.svg' %}">
+        <h2>WELCOME</h2>
+        <div class="input-div focus">
+            <div class="i">
+                <i class="fas fa-user"></i>
+
+            </div>
+            <div>
+                <h5>
+                    Username 
+                </h5>
+            
+                    {{form.username}}
+                    
+             
+                <!-- <input class="input" type="text"> -->
+
+            </div>
+        </div>
+        <div class="input-div focus">
+            <div class="i">
+                <i class="fas fa-lock"></i>
+
+            </div>
+            <div>
+                <h5>
+                    {{form.password}}
+                </h5>
+                <input class="input" type="password">
+
+            </div>
+        </div>
+        <a href="" >Forgot Password</a>
+        <input type="submit" class="btn" value="login">
+        <div>
+            <h5>OR</h5>
+        </div>
+        <br>
+        <div>
+           
+            <i class='fab fa-google' style="color:#6f72f9 ;font-size:48px;padding-left: 25px;"></i>
+            <i class='fab fa-facebook-f' style="color:#6f72f9 ;font-size:48px;padding-left: 25px;"></i>
+            <i class='fab fa-twitter' style="color:#6f72f9 ;font-size:48px;padding-left:25px;"></i>
+        </div>
+        <br>
+       
+    </form>
+    <div class="sign">
+        <h4>If You Dont't Have An Account</h4>
+    
+    <br>
+    
+        <a href="{% url 'signin' %}"><button class="btn">SIGN IN</button></a>
+       
+    </div>
+     
+</div>
+   </div>
+
+<!-- 
+<script type="text/javascript" src="{% static '/js/login.js' %}"> </script> -->
+
+</body>
+</html>
